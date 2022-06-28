@@ -1,0 +1,175 @@
+@use "./../variables/" as *;
+@use "./../abstracts/" as *;
+
+.header {
+  background: $theme-clr;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  &,
+  & * {
+    z-index: 100;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    &__left,
+    &__right {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      padding: 1em 0;
+      column-gap: 1em;
+      row-gap: 0.5em;
+      flex-wrap: wrap;
+      justify-content: center;
+      &__box {
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+    }
+    &__right {
+      &__box {
+        height: 30px;
+        width: 30px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 300ms ease-out;
+        &:hover {
+          transform: rotate(360deg);
+        }
+        @each $brand, $clr in $brand-clr {
+          i[class*="#{$brand}"] {
+            color: $clr;
+          }
+        }
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    ul {
+      list-style: none;
+    }
+    &__list {
+      width: 100%;
+      display: none;
+      justify-content: space-around;
+      &__item {
+        ul {
+          opacity: 0;
+          display: none;
+          position: absolute;
+          padding: 5px;
+          background: $theme-clr;
+          border-radius: 5px;
+          animation: hide 250ms ease-in-out reverse;
+          li {
+            padding: 1em 0.5em;
+            &:hover {
+              background: white;
+              color: $theme-clr;
+            }
+          }
+        }
+        &:hover {
+          ul {
+            display: block;
+            animation: reveal 250ms ease-in-out;
+            opacity: 1;
+          }
+          @keyframes reveal {
+            from {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+    .hamburger {
+      padding: 0.5em 1em;
+      cursor: pointer;
+      background: lighten($color: $theme-clr, $amount: 5%);
+    }
+    @include media-queries(lg) {
+      &__list {
+        display: flex;
+      }
+      .hamburger {
+        display: none;
+      }
+    }
+  }
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50%;
+  background: $theme-clr;
+  color: white;
+  z-index: 105;
+  padding: 1em;
+  transition: 1s cubic-bezier(0.95, 0.95, 0.46, 0.98);
+  overflow: auto;
+  &.hide {
+    left: -100%;
+    transition: 1s cubic-bezier(0.8, 0.13, 0.83, 0.67);
+  }
+  a {
+    display: block;
+    padding: 1em 0.5em;
+    transition: 250ms ease-out;
+    ul {
+      height: 0;
+      transform-origin: top;
+      transition: 250ms ease-out;
+      overflow: hidden;
+      margin-top: 1em;
+      display: block;
+      li {
+        border-bottom: 1px solid rgba($color: $theme-clr, $alpha: 0.1);
+        &:hover {
+          background: white;
+          color: $theme-clr;
+        }
+      }
+    }
+    &:hover {
+      background: white;
+      color: $theme-clr;
+      ul {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  background: rgba($color: #000000, $alpha: 0.8);
+  backdrop-filter: blur(20px);
+  transition: 750ms ease-in-out;
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

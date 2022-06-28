@@ -1,0 +1,7 @@
+@use "./maps" as *;
+
+@mixin media-queries($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}

@@ -1,0 +1,69 @@
+@use "./../variables/" as *;
+@use "./../abstracts/" as *;
+
+.hero-section {
+  height: 80vh;
+  width: 100%;
+  border-radius: 0 80px 800px 650px;
+  background: url("./../../public/background.webp") center / cover;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: radial-gradient(
+      120.99% 120.99% at 45.83% 28.16%,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 49.48%
+    );
+    .text {
+      text-align: center;
+      color: white;
+      height: 50%;
+      .title {
+        font-size: 2.2rem;
+        font-family: $hero-font;
+        letter-spacing: 2px;
+      }
+      .subtitle {
+        position: relative;
+        text-transform: uppercase;
+        margin: 30px 0;
+        letter-spacing: 3px;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+      .btn {
+        position: relative;
+        padding: 0.5em 1em;
+        background-color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: black;
+        transition: 150ms ease-out;
+        &:hover {
+          letter-spacing: 2px;
+        }
+      }
+      @include media-queries(sm) {
+        .title {
+          font-size: 2.5rem;
+        }
+      }
+      @include media-queries(md) {
+        .title {
+          font-size: 2.75rem;
+        }
+        .subtitle {
+          font-size: 1.5rem;
+          letter-spacing: 5px;
+        }
+      }
+      @include media-queries(lg) {
+        .title {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}

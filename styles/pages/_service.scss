@@ -1,0 +1,32 @@
+@use "./../abstracts/" as *;
+
+.service {
+  margin-top: 50px;
+  padding: 0 8% !important;
+  .title {
+    margin-bottom: 1em;
+  }
+  .img-container {
+    img {
+      display: inline;
+    }
+  }
+  .description {
+    display: inline;
+    p {
+      margin-bottom: 1em;
+    }
+    ul,
+    ol {
+      margin-left: 1em;
+    }
+  }
+  @include media-queries(lg) {
+    display: grid;
+    column-gap: 1em;
+    padding: 0 !important;
+    .title {
+      grid-column: 1 / 3;
+    }
+  }
+}
