@@ -3,7 +3,6 @@ import Link from "next/link";
 
 const Header = ({ services, specialities }) => {
   const [visibility, setVisibility] = useState(false);
-
   return (
     <>
       <div className="header">
@@ -61,7 +60,9 @@ const Header = ({ services, specialities }) => {
                   {services.map((el) => {
                     return (
                       <Link href={`/service/${el.slug.current}`}>
-                        <a onClick={() => setVisibility(false)}>{el.title}</a>
+                        <li key={el._id}>
+                          <a onClick={() => setVisibility(false)}>{el.title}</a>
+                        </li>
                       </Link>
                     );
                   })}
@@ -75,7 +76,9 @@ const Header = ({ services, specialities }) => {
                   {specialities.map((el) => {
                     return (
                       <Link href={`/speciality/${el.slug.current}`}>
-                        <a onClick={() => setVisibility(false)}>{el.name}</a>
+                        <li key={el._id}>
+                          <a onClick={() => setVisibility(false)}>{el.name}</a>
+                        </li>
                       </Link>
                     );
                   })}
@@ -126,7 +129,9 @@ const Header = ({ services, specialities }) => {
             {services.map((el) => {
               return (
                 <Link href={`/service/${el.slug.current}`}>
-                  <a onClick={() => setVisibility(false)}>{el.title}</a>
+                  <li key={el._id}>
+                    <a onClick={() => setVisibility(false)}>{el.title}</a>
+                  </li>
                 </Link>
               );
             })}
@@ -138,7 +143,9 @@ const Header = ({ services, specialities }) => {
             {specialities.map((el) => {
               return (
                 <Link href={`/speciality/${el.slug.current}`}>
-                  <a onClick={() => setVisibility(false)}>{el.name}</a>
+                  <li key={el._id}>
+                    <a onClick={() => setVisibility(false)}>{el.name}</a>
+                  </li>
                 </Link>
               );
             })}
