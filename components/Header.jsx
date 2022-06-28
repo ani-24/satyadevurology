@@ -59,7 +59,7 @@ const Header = ({ services, specialities }) => {
                 <ul>
                   {services.map((el) => {
                     return (
-                      <Link href={`/service/${el.slug.current}`}>
+                      <Link href={`/service/${el.slug.current}`} key={el._id}>
                         <li key={el._id}>
                           <a onClick={() => setVisibility(false)}>{el.title}</a>
                         </li>
@@ -75,7 +75,10 @@ const Header = ({ services, specialities }) => {
                 <ul>
                   {specialities.map((el) => {
                     return (
-                      <Link href={`/speciality/${el.slug.current}`}>
+                      <Link
+                        href={`/speciality/${el.slug.current}`}
+                        key={el._id}
+                      >
                         <li key={el._id}>
                           <a onClick={() => setVisibility(false)}>{el.name}</a>
                         </li>
@@ -128,7 +131,7 @@ const Header = ({ services, specialities }) => {
           <ul>
             {services.map((el) => {
               return (
-                <Link href={`/service/${el.slug.current}`}>
+                <Link href={`/service/${el.slug.current}`} key={el._id}>
                   <li key={el._id}>
                     <a onClick={() => setVisibility(false)}>{el.title}</a>
                   </li>
@@ -142,7 +145,7 @@ const Header = ({ services, specialities }) => {
           <ul>
             {specialities.map((el) => {
               return (
-                <Link href={`/speciality/${el.slug.current}`}>
+                <Link href={`/speciality/${el.slug.current}`} key={el._id}>
                   <li key={el._id}>
                     <a onClick={() => setVisibility(false)}>{el.name}</a>
                   </li>
