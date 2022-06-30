@@ -15,7 +15,7 @@ const Blogs = ({ blogs, services, specialities }) => {
           {blogs.map((el, index) => {
             console.log(el.slug?.current);
             return (
-              <Link href={`/blog/${el.slug?.current}`}>
+              <Link href={`/blog/${el.slug?.current}`} key={index}>
                 <div className="card blog-card box-shadow" key={index}>
                   <div className="blog-card__img">
                     <img src={urlFor(el.image.asset._ref)} alt={el.title} />

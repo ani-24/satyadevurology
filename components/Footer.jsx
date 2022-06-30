@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container footer__grid">
         <div className="footer__grid__item footer__grid__item--about">
           <div className="img-container">
-            <img src="./sataydev-logo2.png" alt="" />
+            <img src="../sataydev-logo2.png" alt="" />
           </div>
           <p>
             Welcome to Satyadev Urology , most recommended urology hospital in
@@ -23,7 +23,7 @@ const Footer = () => {
               <Link href="/about-us">
                 <a>
                   {" "}
-                  <i class="fa-solid fa-paperclip"></i> About
+                  <i className="fa-solid fa-paperclip"></i> About
                 </a>
               </Link>
             </li>
@@ -31,21 +31,21 @@ const Footer = () => {
               <Link href="/gallery">
                 <a>
                   {" "}
-                  <i class="fa-solid fa-paperclip"></i> Gallery
+                  <i className="fa-solid fa-paperclip"></i> Gallery
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/press-release">
                 <a>
-                  <i class="fa-solid fa-paperclip"></i> Press Release
+                  <i className="fa-solid fa-paperclip"></i> Press Release
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/contact">
                 <a>
-                  <i class="fa-solid fa-paperclip"></i> Contact Us
+                  <i className="fa-solid fa-paperclip"></i> Contact Us
                 </a>
               </Link>
             </li>
@@ -53,7 +53,7 @@ const Footer = () => {
               <Link href="/services">
                 <a>
                   {" "}
-                  <i class="fa-solid fa-paperclip"></i> Services
+                  <i className="fa-solid fa-paperclip"></i> Services
                 </a>
               </Link>
             </li>
@@ -61,7 +61,7 @@ const Footer = () => {
               <Link href="/specialities">
                 <a>
                   {" "}
-                  <i class="fa-solid fa-paperclip"></i> Specialities
+                  <i className="fa-solid fa-paperclip"></i> Specialities
                 </a>
               </Link>
             </li>
@@ -69,7 +69,7 @@ const Footer = () => {
               <Link href="/blogs">
                 <a>
                   {" "}
-                  <i class="fa-solid fa-paperclip"></i> Blogs
+                  <i className="fa-solid fa-paperclip"></i> Blogs
                 </a>
               </Link>
             </li>
@@ -79,13 +79,14 @@ const Footer = () => {
           <h2 className="footer__grid__item__title">Get in Touch</h2>
           <ul>
             <li>
-              <i class="fa-solid fa-phone"></i> +91 8235152796, 6207909132
+              <i className="fa-solid fa-phone"></i> +91 8235152796, 6207909132
             </li>
             <li>
-              <i class="fa-solid fa-envelope"></i> drrajeshranjan447@gmail.com
+              <i className="fa-solid fa-envelope"></i>{" "}
+              drrajeshranjan447@gmail.com
             </li>
             <li>
-              <i class="fa-brands fa-whatsapp"></i> 80502 95197
+              <i className="fa-brands fa-whatsapp"></i> 80502 95197
             </li>
           </ul>
         </div>
@@ -93,8 +94,8 @@ const Footer = () => {
           <h2 className="footer__grid__item__title">Address</h2>
           <ul>
             <li>
-              <i class="fa-solid fa-location-dot"></i> Magistrate Colony Main
-              Rd, Magistrate Colony, Khajpura, Patna, Bihar 800025
+              <i className="fa-solid fa-location-dot"></i> Magistrate Colony
+              Main Rd, Magistrate Colony, Khajpura, Patna, Bihar 800025
             </li>
             <li>
               <iframe
@@ -115,28 +116,28 @@ const Footer = () => {
             <li>
               <Link href="/">
                 <a>
-                  <i class="fa-brands fa-facebook social"></i>
+                  <i className="fa-brands fa-facebook social"></i>
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/">
                 <a>
-                  <i class="fa-brands fa-youtube social"></i>
+                  <i className="fa-brands fa-youtube social"></i>
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/">
                 <a>
-                  <i class="fa-brands fa-twitter social"></i>
+                  <i className="fa-brands fa-twitter social"></i>
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/">
                 <a>
-                  <i class="fa-brands fa-instagram social"></i>
+                  <i className="fa-brands fa-instagram social"></i>
                 </a>
               </Link>
             </li>
@@ -146,11 +147,8 @@ const Footer = () => {
       <div className="container footer__middle">
         <p>Satisified By</p>
         <div className="img-container">
-          <a
-            target="_blank"
-            href="https://www.justdial.com/Patna/Satyadev-Super-Speciality-Hospital-Kidney-And-Stone-Clinic-Near-Ramnaguri-More-Ashiana-Nagar/0612PX612-X612-190815233024-Y3E2_BZDET?xid=UGF0bmEgc2F0eWFkZXYgc3VwZXIgc3BlY2lhbGl0eSBob3NwaXRhbA=="
-          >
-            <img src="./jdlogosvg.svg" alt="" />
+          <a href="https://www.justdial.com/Patna/Satyadev-Super-Speciality-Hospital-Kidney-And-Stone-Clinic-Near-Ramnaguri-More-Ashiana-Nagar/0612PX612-X612-190815233024-Y3E2_BZDET?xid=UGF0bmEgc2F0eWFkZXYgc3VwZXIgc3BlY2lhbGl0eSBob3NwaXRhbA==">
+            <img src="./../jdlogosvg.svg" alt="" />
           </a>
         </div>
       </div>
