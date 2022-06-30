@@ -91,6 +91,11 @@ const Blogs = ({ blogs }) => {
           }
         })}
       </div>
+      <div className="btn--view-all">
+        <Link href="/blogs">
+          <a className="btn box-shadow">View all &rarr;</a>
+        </Link>
+      </div>
     </section>
   );
 };
