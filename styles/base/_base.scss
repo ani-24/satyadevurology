@@ -4,14 +4,22 @@
 html,
 body {
   font-family: $text-font;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 2em;
+  @include media-queries(md) {
+    font-size: 14px;
+  }
   @include media-queries(lg) {
     font-size: 15px;
   }
 }
 
+img {
+  width: 100%;
+}
+
 #nprogress .bar {
-  background: white;
+  background: darken($color: $theme-clr, $amount: 20%);
   height: 5px;
 }
 
@@ -33,4 +41,9 @@ a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.box-shadow {
+  background-color: #f3f3f3;
+  box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 0.2);
 }

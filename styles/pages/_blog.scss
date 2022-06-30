@@ -1,0 +1,19 @@
+@use "./../abstracts/" as *;
+
+.blog {
+  margin-top: 50px;
+  padding: 0 8% !important;
+  .title {
+    margin-bottom: 1em;
+  }
+  .description {
+    display: inline;
+    p {
+      margin-bottom: 1em;
+    }
+    ul,
+    ol {
+      margin-left: 1em;
+    }
+  }
+}

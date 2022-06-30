@@ -1,6 +1,6 @@
 export default {
-  name: "services",
-  title: "Services",
+  name: "blogs",
+  title: "Blogs",
   type: "document",
   fields: [
     {
@@ -20,20 +20,24 @@ export default {
       type: "image",
     },
     {
-      name: "icon",
-      title: "Icon",
-      type: "image",
-    },
-    {
-      name: "introduction",
-      title: "Introduction",
+      name: "author",
+      title: "Author",
       type: "string",
+      initialValue: "Dr. Kumar Rajesh Ranjan",
     },
     {
       name: "description",
       title: "Description",
       type: "array",
       of: [{ type: "block" }],
+    },
+    {
+      name: "date",
+      title: "Publishing Date",
+      type: "date",
+      options: {
+        dateFormat: "Do MMM",
+      },
     },
   ],
 };

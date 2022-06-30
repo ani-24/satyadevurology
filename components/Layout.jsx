@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import Router from "next/router";
 import nProgress from "nprogress";
+import Footer from "./Footer";
 
 const Layout = ({ children, services }) => {
   Router.events.on("routeChangeStart", (url) => {
@@ -25,6 +26,7 @@ const Layout = ({ children, services }) => {
         />
       </Head>
       {children}
+      <Footer />
     </>
   );
 };

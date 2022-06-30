@@ -3,10 +3,14 @@ import Link from "next/link";
 
 const Header = ({ services, specialities }) => {
   const [visibility, setVisibility] = useState(false);
+  const expand = (target) => {
+    console.log(target);
+  };
   return (
     <>
-      <div className="header">
-        <div className="header__top container">
+      {/* <div className="header"> */}
+      <div className="header__top">
+        <div className="container">
           <ul className="header__top__left">
             <li className="header__top__left__box">
               <i className="fa-regular fa-clock"></i>{" "}
@@ -36,7 +40,9 @@ const Header = ({ services, specialities }) => {
             </a>
           </ul>
         </div>
-        <div className="header__bottom container">
+      </div>
+      <div className="header__bottom">
+        <div className="container">
           <ul className="header__bottom__list">
             <li className="header__bottom__list__item">
               <Link href="/">
@@ -95,7 +101,7 @@ const Header = ({ services, specialities }) => {
               <Link href="/">Gallery</Link>
             </li>
             <li className="header__bottom__list__item">
-              <Link href="/">Blog</Link>
+              <Link href="/blogs">Blog</Link>
             </li>
             <li className="header__bottom__list__item">
               <Link href="/">Press Release</Link>
@@ -109,6 +115,7 @@ const Header = ({ services, specialities }) => {
           </div>
         </div>
       </div>
+      {/* </div> */}
       <div
         className={`overlay ${visibility ? "show" : "hide"}`}
         onClick={() => setVisibility(false)}
@@ -123,9 +130,18 @@ const Header = ({ services, specialities }) => {
         <Link href="/">
           <a onClick={() => setVisibility(false)}>Dr. Rajesh Ranjan</a>
         </Link>
-        <a href="#">
+        <a
+          href="#"
+          data-target="services-list"
+          onClick={(e) => {
+            document
+              .querySelector(".specialities-list")
+              .classList.remove("active");
+            document.querySelector(".services-list").classList.toggle("active");
+          }}
+        >
           Services <i className="fa-solid fa-caret-down"></i>
-          <ul>
+          <ul className="services-list">
             {services.map((el, idx) => {
               return (
                 <Link href={`/service/${el.slug.current}`} key={idx}>
@@ -137,9 +153,18 @@ const Header = ({ services, specialities }) => {
             })}
           </ul>
         </a>
-        <a href="#">
+        <a
+          href="#"
+          data-target="specialities-list"
+          onClick={(e) => {
+            document.querySelector(".services-list").classList.remove("active");
+            document
+              .querySelector(".specialities-list")
+              .classList.toggle("active");
+          }}
+        >
           Spcialities <i className="fa-solid fa-caret-down"></i>
-          <ul>
+          <ul className="specialities-list">
             {specialities.map((el, idx) => {
               return (
                 <Link href={`/speciality/${el.slug.current}`} key={idx}>
@@ -160,7 +185,7 @@ const Header = ({ services, specialities }) => {
         <Link href="/">
           <a onClick={() => setVisibility(false)}>Gallery</a>
         </Link>
-        <Link href="/">
+        <Link href="/blogs">
           <a onClick={() => setVisibility(false)}>Blog</a>
         </Link>
         <Link href="/">
