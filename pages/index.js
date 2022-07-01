@@ -19,7 +19,7 @@ const HeroSection = () => {
           <h1 className="title">SatyaDev Super Speciality Hospital</h1>
           <p className="subtitle">Kidney & Stone Clinic</p>
           <Link href="/">
-            <a className="btn">Contact us</a>
+            <a className="btn box-shadow">Contact us</a>
           </Link>
         </div>
       </div>
