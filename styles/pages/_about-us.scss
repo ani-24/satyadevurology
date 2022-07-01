@@ -22,25 +22,26 @@
       margin-bottom: 1em;
     }
   }
-  &__gallery {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-    .about-us__card {
-      width: 300px;
-      .card__img {
-        width: 100%;
-        img {
-          // height: 100%;
-          // width: auto;
-          display: block;
-        }
+}
+
+.about-us__gallery {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  .about-us__card {
+    width: 300px;
+    .card__img {
+      width: 100%;
+      img {
+        // height: 100%;
+        // width: auto;
+        display: block;
       }
-      .card__body {
-        padding: 10px;
-        text-align: center;
-      }
+    }
+    .card__body {
+      padding: 10px;
+      text-align: center;
     }
   }
 }
