@@ -124,7 +124,7 @@ const Header = ({ services, specialities }) => {
         <Link href="/">
           <a onClick={() => setVisibility(false)}>Home</a>
         </Link>
-        <Link href="/">
+        <Link href="/about-us">
           <a onClick={() => setVisibility(false)}>About us</a>
         </Link>
         <Link href="/">
