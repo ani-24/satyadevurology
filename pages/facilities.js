@@ -9,7 +9,7 @@ const Faceilities = ({ services, specialities }) => {
       <Header services={services} specialities={specialities} />
       <div className="container">
         <section className="section section--facility">
-          <h1 className="section__title">Facilties we provide</h1>
+          <h1 className="section__title">Facilities we provide</h1>
           <div className="section--facility__grid">
             <div className="section--facility__grid__item box-shadow">
               <ul>
