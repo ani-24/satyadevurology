@@ -3,9 +3,6 @@ import Link from "next/link";
 
 const Header = ({ services, specialities }) => {
   const [visibility, setVisibility] = useState(false);
-  const expand = (target) => {
-    console.log(target);
-  };
   return (
     <>
       {/* <div className="header"> */}
@@ -92,7 +89,7 @@ const Header = ({ services, specialities }) => {
               </a>
             </li>
             <li className="header__bottom__list__item">
-              <Link href="/">Facilities</Link>
+              <Link href="/facilities">Facilities</Link>
             </li>
             <li className="header__bottom__list__item">
               <Link href="/">Our Doctors</Link>
@@ -176,7 +173,7 @@ const Header = ({ services, specialities }) => {
             })}
           </ul>
         </a>
-        <Link href="/">
+        <Link href="/facilities">
           <a onClick={() => setVisibility(false)}>Facilities</a>
         </Link>
         <Link href="/">

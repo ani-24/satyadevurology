@@ -1,0 +1,22 @@
+@use "./../abstracts" as *;
+
+.section--facility {
+  &__grid {
+    display: grid;
+    gap: 50px;
+    &__item {
+      padding: 2em;
+      ul {
+        list-style: none;
+        li {
+          &:not(:last-child) {
+            margin-bottom: 0.75em;
+          }
+        }
+      }
+    }
+    @include media-queries(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
