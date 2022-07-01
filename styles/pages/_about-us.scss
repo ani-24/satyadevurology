@@ -1,6 +1,6 @@
 @use "./../variables/" as *;
 
-.about-us {
+.section--about {
   padding: 0 8% !important;
   .section__title {
     text-align: start;
@@ -15,6 +15,11 @@
           text-decoration: none;
         }
       }
+    }
+    ul,
+    ol {
+      margin-left: 1em;
+      margin-bottom: 1em;
     }
   }
   &__gallery {

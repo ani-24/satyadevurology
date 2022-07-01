@@ -127,7 +127,7 @@ const Header = ({ services, specialities }) => {
         <Link href="/about-us">
           <a onClick={() => setVisibility(false)}>About us</a>
         </Link>
-        <Link href="/">
+        <Link href="/best-urologist-in-patna">
           <a onClick={() => setVisibility(false)}>Dr. Rajesh Ranjan</a>
         </Link>
         <a

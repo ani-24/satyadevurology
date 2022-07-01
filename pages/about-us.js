@@ -10,7 +10,7 @@ const AboutUs = ({ services, specialities }) => {
     <>
       <Header services={services} specialities={specialities} />
       <div className="container">
-        <section className="section about-us">
+        <section className="section section--about">
           <h1 className="section__title">Who are we?</h1>
           <div className="body">
             <p>
@@ -50,7 +50,7 @@ const AboutUs = ({ services, specialities }) => {
               .
             </p>
             <strong>Common surgical facility:</strong>
-            <ul style={{ marginLeft: "1em" }}>
+            <ul>
               <li>PCNL For Kidney Stone</li>
               <li>URS For Ureteric Stone</li>
               <li>RIRS(Flexi)For Upper Ureteric And Renal Stone</li>
