@@ -83,7 +83,13 @@ const Blogs = ({ blogs }) => {
                     <span className="blog-card__footer__author">
                       {el.author}
                     </span>
-                    <span className="blog-card__footer__date">{el.date}</span>
+                    <span className="blog-card__footer__date">
+                      {new Date(el.date).toLocaleDateString("en-gb", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
                   </div>
                 </div>
               </Link>

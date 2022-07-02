@@ -6,6 +6,7 @@ import { client, urlFor } from "../lib/client";
 import Link from "next/link";
 
 const Blogs = ({ blogs, services, specialities }) => {
+  console.log(blogs[0]);
   return (
     <>
       <Header services={services} specialities={specialities} />
@@ -13,7 +14,6 @@ const Blogs = ({ blogs, services, specialities }) => {
         <h1 className="section__title">Our Blog</h1>
         <div className="gallery">
           {blogs.map((el, index) => {
-            console.log(el.slug?.current);
             return (
               <Link href={`/blog/${el.slug?.current}`} key={index}>
                 <div className="card blog-card box-shadow" key={index}>
@@ -25,7 +25,13 @@ const Blogs = ({ blogs, services, specialities }) => {
                     <span className="blog-card__footer__author">
                       {el.author}
                     </span>
-                    <span className="blog-card__footer__date">{el.date}</span>
+                    <span className="blog-card__footer__date">
+                      {new Date(el.date).toLocaleDateString("en-gb", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
                   </div>
                 </div>
               </Link>
