@@ -11,8 +11,8 @@ const DoctorsList = ({ list, services, specialities }) => {
             List of Our Doctors
           </h1>
           <ol className="doctors-list">
-            {list.map((el) => {
-              return <li>{el.name}</li>;
+            {list.map((el, index) => {
+              return <li key={index}>{el.name}</li>;
             })}
           </ol>
         </section>
