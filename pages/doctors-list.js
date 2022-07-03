@@ -6,7 +6,7 @@ const DoctorsList = ({ list, services, specialities }) => {
     <>
       <Header services={services} specialities={specialities} />
       <div className="container">
-        <section className="section">
+        <section className="section section--about">
           <h1 className="section__title" style={{ textAlign: "start" }}>
             List of Our Doctors
           </h1>
