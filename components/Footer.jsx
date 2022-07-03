@@ -106,28 +106,28 @@ const Footer = () => {
 
           <ul>
             <li>
-              <Link href="/">
+              <Link href="https://www.facebook.com/DrRajeshRanjanUrologistinPatna/">
                 <a>
                   <i className="fa-brands fa-facebook social"></i>
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="https://www.youtube.com/channel/UChjSdAvs6jSKTn9-9JaWjhQ">
                 <a>
                   <i className="fa-brands fa-youtube social"></i>
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="https://twitter.com/RajeshUrologist?s=08">
                 <a>
                   <i className="fa-brands fa-twitter social"></i>
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="https://www.instagram.com/drrajeshurologistpatna/?hl=en">
                 <a>
                   <i className="fa-brands fa-instagram social"></i>
                 </a>

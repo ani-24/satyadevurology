@@ -30,16 +30,32 @@ const Header = ({ services, specialities }) => {
             </li>
           </ul>
           <ul className="header__top__right">
-            <a href="#" className="header__top__right__box">
+            <a
+              href="https://www.facebook.com/DrRajeshRanjanUrologistinPatna/"
+              target="_blank"
+              className="header__top__right__box"
+            >
               <i className="fa-brands fa-facebook"></i>
             </a>
-            <a href="#" className="header__top__right__box">
+            <a
+              href="https://www.youtube.com/channel/UChjSdAvs6jSKTn9-9JaWjhQ"
+              target="_blank"
+              className="header__top__right__box"
+            >
               <i className="fa-brands fa-youtube"></i>
             </a>
-            <a href="#" className="header__top__right__box">
+            <a
+              href="https://twitter.com/RajeshUrologist?s=08"
+              target="_blank"
+              className="header__top__right__box"
+            >
               <i className="fa-brands fa-twitter"></i>
             </a>
-            <a href="#" className="header__top__right__box">
+            <a
+              href="https://www.instagram.com/drrajeshurologistpatna/?hl=en"
+              target="_blank"
+              className="header__top__right__box"
+            >
               <i className="fa-brands fa-instagram"></i>
             </a>
           </ul>
