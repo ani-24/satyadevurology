@@ -214,10 +214,10 @@
     margin-top: 30px;
     .img-container {
       max-height: 300px;
-      max-width: 100%;
+      max-width: 300px;
       overflow: hidden;
       img {
-        height: auto;
+        height: 100%;
         width: auto;
       }
     }

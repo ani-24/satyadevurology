@@ -35,7 +35,10 @@ const EmergencyNum = () => {
       <div className="emergency-section container box-shadow">
         <i className="fa-solid fa-triangle-exclamation icon"></i>
         <p className="text">
-          For emergency Cases: <u>(+91)-6207909132</u>
+          For emergency Cases:{" "}
+          <u>
+            <a href="tel:6204909132">(+91)-6207909132</a>
+          </u>
         </p>
       </div>
     </div>
@@ -122,7 +125,7 @@ const Events = () => {
       </p>
       <div className="events__gallery">
         <div className="img-container">
-          <img src="event1.png" />
+          <img src="event1.jpeg" />
         </div>
         <div className="img-container">
           <img src="event2.png" />

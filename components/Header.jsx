@@ -15,11 +15,18 @@ const Header = ({ services, specialities }) => {
             </li>
             <li className="header__top__left__box">
               <i className="fa-regular fa-envelope"></i>{" "}
-              <span>drrajeshranjan447@gmail.com</span>
+              <a href="mailto:drrajeshranjan447@gmail.com">
+                drrajeshranjan447@gmail.com
+              </a>
             </li>
             <li className="header__top__left__box">
               <i className="fa-solid fa-location-dot"></i>{" "}
-              <span>Magistrate colony, Patna - 800025</span>
+              <Link
+                target="_blank"
+                href="https://maps.google.com/maps?ll=25.612901,85.0795&z=15&t=m&hl=en&gl=IN&mapclient=embed&cid=11279533622444542325"
+              >
+                Magistrate colony, Patna - 800025
+              </Link>
             </li>
           </ul>
           <ul className="header__top__right">
