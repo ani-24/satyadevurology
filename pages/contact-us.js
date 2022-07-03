@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 
 import { client } from "../lib/client";
 
 const Contact = ({ services, specialities }) => {
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    message: "",
+  });
+  let name, value;
+  const postUserData = (event) => {
+    name = event.target.name;
+    value = event.target.value;
+    setUserData({ ...userData, [name]: value });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const res = await fetch("/api/contact", {
+      method: "post",
+      body: JSON.stringify(userData),
+    });
+    if (res) {
+      console.log(res);
+      setUserData({ name: "", email: "", mobile: "", message: "" });
+    }
+  };
+
   return (
     <>
       <Header services={services} specialities={specialities} />
@@ -20,22 +45,53 @@ const Contact = ({ services, specialities }) => {
           <div className="contact-form">
             <form action="#">
               <div className="input-field">
-                <input type="text" className="input" required />
+                <input
+                  type="text"
+                  className="input"
+                  required
+                  value={userData.name}
+                  onChange={postUserData}
+                  name="name"
+                />
                 <label className="label">Name</label>
               </div>
               <div className="input-field">
-                <input type="email" className="input" required />
+                <input
+                  type="email"
+                  className="input"
+                  required
+                  value={userData.email}
+                  onChange={postUserData}
+                  name="email"
+                />
                 <label className="label">Email</label>
               </div>
               <div className="input-field">
-                <input type="mobile" className="input" required />
+                <input
+                  type="mobile"
+                  className="input"
+                  required
+                  value={userData.mobile}
+                  onChange={postUserData}
+                  name="mobile"
+                />
                 <label className="label">Mobile</label>
               </div>
               <div className="input-field textarea">
-                <textarea className="input" required></textarea>
+                <textarea
+                  className="input"
+                  required
+                  onChange={postUserData}
+                  name="message"
+                  value={userData.message}
+                ></textarea>
                 <label className="label">Message</label>
               </div>
-              <button type="submit" className="btn-submit box-shadow">
+              <button
+                type="submit"
+                className="btn-submit box-shadow"
+                onClick={handleSubmit}
+              >
                 Send <i className="fas fa-paper-plane"></i>
               </button>
             </form>
