@@ -5,7 +5,7 @@ const Wame = () => {
   return (
     <>
       <Link
-        href="https://wa.me/+918050295197?text=Hello,%20I%20visited%20your%20website%20and%20I%20wanted%20to%20do%20enquiry"
+        href="https://wa.me/+918050295197?text=I%20came%20to%20know%20about%20this%20Hospital%20through%20your%20website,%20I%20need%20some%20more%20information..."
         target="_blank"
       >
         <div className="wame">
