@@ -3,6 +3,8 @@ import Header from "../components/Header";
 
 import { client } from "../lib/client";
 
+import emailjs from "emailjs-com";
+
 const Contact = ({ services, specialities }) => {
   const [userData, setUserData] = useState({
     name: "",
@@ -19,14 +21,21 @@ const Contact = ({ services, specialities }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const res = await fetch("/api/contact", {
-      method: "post",
-      body: JSON.stringify(userData),
-    });
-    if (res) {
-      console.log(res);
-      setUserData({ name: "", email: "", mobile: "", message: "" });
-    }
+    emailjs
+      .sendForm(
+        "service_y0aaqth",
+        "template_xnzsxjn",
+        event.target,
+        "_mwu7W44_eSioJwfN"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -43,7 +52,7 @@ const Contact = ({ services, specialities }) => {
         ></iframe>
         <div className="container">
           <div className="contact-form">
-            <form action="#">
+            <form action="#" onSubmit={handleSubmit}>
               <div className="input-field">
                 <input
                   type="text"
@@ -87,11 +96,7 @@ const Contact = ({ services, specialities }) => {
                 ></textarea>
                 <label className="label">Message</label>
               </div>
-              <button
-                type="submit"
-                className="btn-submit box-shadow"
-                onClick={handleSubmit}
-              >
+              <button type="submit" className="btn-submit box-shadow">
                 Send <i className="fas fa-paper-plane"></i>
               </button>
             </form>
