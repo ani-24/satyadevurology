@@ -47,9 +47,12 @@ const BestUrologistInPatna = ({ services, specialities }) => {
             </p>
             <p>
               He is also one of the{" "}
-              <Link href="/kidney-stone">best kidney stone surgeon</Link> having
-              performed more than 1000 PCNL,MINIPCNL,RIRS,URS,.TURP. His name is
-              also known for best prostate surgeon, Pioneer of HOLEP in Bihar.
+              <Link href="/service/kidney-stone">
+                best kidney stone surgeon
+              </Link>{" "}
+              having performed more than 1000 PCNL,MINIPCNL,RIRS,URS,.TURP. His
+              name is also known for best prostate surgeon, Pioneer of HOLEP in
+              Bihar.
             </p>
             <p>
               Dr. Kumar Rajesh Ranjan is also senior Consultant in the
