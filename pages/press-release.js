@@ -3,7 +3,22 @@ import Header from "../components/Header";
 
 import { client, urlFor } from "./../lib/client";
 
+import { LightBox } from "react-lightbox-pack";
+import "react-lightbox-pack/dist/index.css";
+
 const PressRelease = ({ pressRelease, services, specialities }) => {
+  const [toggle, setToggle] = React.useState(false);
+  const [sIndex, setSIndex] = React.useState(0);
+
+  // Handler
+  const lightBoxHandler = (state, sIndex) => {
+    setToggle(state);
+    setSIndex(sIndex);
+  };
+  const data = [];
+  pressRelease[0].images.forEach((el) => {
+    data.push({ image: urlFor(el.asset._ref) });
+  });
   return (
     <>
       <Header services={services} specialities={specialities} />
@@ -26,6 +41,17 @@ const PressRelease = ({ pressRelease, services, specialities }) => {
           })}
         </div>
       </div>
+      <LightBox
+        state={toggle}
+        event={lightBoxHandler}
+        data={data}
+        imageWidth="60vw"
+        imageHeight="70vh"
+        thumbnailHeight={50}
+        thumbnailWidth={50}
+        setImageIndex={setSIndex}
+        imageIndex={sIndex}
+      />
     </>
   );
 };
