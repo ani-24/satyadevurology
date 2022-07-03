@@ -22,7 +22,8 @@ const Header = ({ services, specialities }) => {
             <li className="header__top__left__box">
               <i className="fa-solid fa-location-dot"></i>{" "}
               <Link
-                target="_blank"
+                targt="_blank"
+                rel="noreferrer"
                 href="https://maps.google.com/maps?ll=25.612901,85.0795&z=15&t=m&hl=en&gl=IN&mapclient=embed&cid=11279533622444542325"
               >
                 Magistrate colony, Patna - 800025
@@ -32,28 +33,32 @@ const Header = ({ services, specialities }) => {
           <ul className="header__top__right">
             <a
               href="https://www.facebook.com/DrRajeshRanjanUrologistinPatna/"
-              target="_blank"
+              targt="_blank"
+              rel="noreferrer"
               className="header__top__right__box"
             >
               <i className="fa-brands fa-facebook"></i>
             </a>
             <a
               href="https://www.youtube.com/channel/UChjSdAvs6jSKTn9-9JaWjhQ"
-              target="_blank"
+              targt="_blank"
+              rel="noreferrer"
               className="header__top__right__box"
             >
               <i className="fa-brands fa-youtube"></i>
             </a>
             <a
               href="https://twitter.com/RajeshUrologist?s=08"
-              target="_blank"
+              targt="_blank"
+              rel="noreferrer"
               className="header__top__right__box"
             >
               <i className="fa-brands fa-twitter"></i>
             </a>
             <a
               href="https://www.instagram.com/drrajeshurologistpatna/?hl=en"
-              target="_blank"
+              targt="_blank"
+              rel="noreferrer"
               className="header__top__right__box"
             >
               <i className="fa-brands fa-instagram"></i>
