@@ -101,7 +101,7 @@ const Header = ({ services, specialities }) => {
               <Link href="/blogs">Blog</Link>
             </li>
             <li className="header__bottom__list__item">
-              <Link href="/">Press Release</Link>
+              <Link href="/press-release">Press Release</Link>
             </li>
             <li className="header__bottom__list__item">
               <Link href="/">Contact us</Link>
@@ -185,7 +185,7 @@ const Header = ({ services, specialities }) => {
         <Link href="/blogs">
           <a onClick={() => setVisibility(false)}>Blog</a>
         </Link>
-        <Link href="/">
+        <Link href="/press-release">
           <a onClick={() => setVisibility(false)}>Press Release</a>
         </Link>
         <Link href="/">

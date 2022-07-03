@@ -25,7 +25,7 @@ const DoctorsList = ({ list, services, specialities }) => {
 
 export default DoctorsList;
 
-export const getServerSideProps = async ({ params }) => {
+export const getServerSideProps = async () => {
   const list = await client.fetch(`*[_type == "doctors"]`);
   const services = await client.fetch(`*[_type=="services"]`);
   const specialities = await client.fetch(`*[_type=="specialities"]`);
