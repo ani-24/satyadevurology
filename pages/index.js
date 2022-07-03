@@ -14,7 +14,7 @@ import { Navigation, Pagination } from "swiper";
 const HeroSection = () => {
   return (
     <div className="hero-section">
-      <div className="container">
+      <div>
         <div className="text">
           <h1 className="title">SatyaDev Super Speciality Hospital</h1>
           <p className="subtitle">Kidney & Stone Clinic</p>

@@ -5,14 +5,16 @@
   height: 50vh;
   width: 100%;
   border-radius: 80px 150px 500px 70%;
-  background: url("./../../public/background.jpeg") center / auto 100%;
-  .container {
+  background: url("./../../public/background.webp") center / auto 100%;
+  overflow: hidden;
+  & > div {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100% !important;
     background: radial-gradient(
-      120.99% 120.99% at 45.83% 50%,
+      150.99% 150.99% at 50.83% 50%,
       rgba(0, 0, 0, 0.9) 0%,
       rgba(0, 0, 0, 0) 49.48%
     );
@@ -239,7 +241,7 @@
 
 .map {
   width: 100%;
-  height: 500px;
+  height: 300px;
 }
 
 .btn--view-all {
