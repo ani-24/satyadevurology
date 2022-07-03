@@ -132,13 +132,51 @@
 .service-card {
   position: relative;
   max-width: 400px;
-
+  .card__inner {
+    width: 100%;
+  }
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+  }
+  .front {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    backface-visibility: hidden;
+    & > * {
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+    transition: 500ms ease-in-out;
+  }
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: 500ms ease-in-out;
+  }
+  &__title {
+    font-size: 1.7rem;
+  }
   &__img {
     width: 100px;
     height: 100px;
     position: relative;
     padding: 10px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
     &::after {
       content: "";
       position: absolute;
@@ -170,6 +208,14 @@
     left: 0;
     bottom: 0;
     z-index: -1;
+  }
+  &:hover {
+    .front {
+      transform: rotateY(-180deg);
+    }
+    .back {
+      transform: rotate(0deg);
+    }
   }
 }
 

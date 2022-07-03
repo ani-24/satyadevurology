@@ -53,15 +53,29 @@ const Services = ({ services }) => {
         {services.map((el, index) => {
           return (
             <div className="card service-card" key={index}>
-              <div className="service-card__img">
-                <img src={urlFor(el.icon.asset._ref)} alt={el.title} />
+              <div className="card__inner">
+                <div className="front box-shadow">
+                  <div className="service-card__img">
+                    <img src={urlFor(el.icon.asset._ref)} alt={el.title} />
+                  </div>
+                  <h3 className="service-card__title">{el.title}</h3>
+                  <Link href={`/service/${el.slug.current}`}>
+                    <a className="service-card__btn box-shadow">
+                      Read about it
+                    </a>
+                  </Link>
+                </div>
+                <div className="back box-shadow">
+                  <div className="service-card__text">
+                    <p className="service-card__description">
+                      {el.introduction}
+                    </p>
+                    <Link href={`/service/${el.slug.current}`}>
+                      <a className="service-card__btn box-shadow">Read more</a>
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <h3 className="service-card__title">{el.title}</h3>
-              <p className="service-card__description">{el.introduction}</p>
-              <Link href={`/service/${el.slug.current}`}>
-                <a className="service-card__btn box-shadow">Read more</a>
-              </Link>
-              <div className="background box-shadow"></div>
             </div>
           );
         })}
