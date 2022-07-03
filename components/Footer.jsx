@@ -144,14 +144,6 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="container footer__middle">
-        <p>Satisified By</p>
-        <div className="img-container">
-          <a href="https://www.justdial.com/Patna/Satyadev-Super-Speciality-Hospital-Kidney-And-Stone-Clinic-Near-Ramnaguri-More-Ashiana-Nagar/0612PX612-X612-190815233024-Y3E2_BZDET?xid=UGF0bmEgc2F0eWFkZXYgc3VwZXIgc3BlY2lhbGl0eSBob3NwaXRhbA==">
-            <img src="./../jdlogosvg.svg" alt="" />
-          </a>
-        </div>
-      </div>
       <div className="footer__bottom">
         © Copyright 2022 satyadevhospital. All rights reserved.
       </div>

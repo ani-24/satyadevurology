@@ -88,24 +88,6 @@
       font-size: 1rem;
     }
   }
-  &__middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    p {
-      font-size: 2rem;
-      color: #ff6c00;
-      font-weight: bold;
-    }
-    .img-container {
-      padding: 1em;
-      background: white;
-      margin-top: 1em;
-      img {
-        width: 200px;
-      }
-    }
-  }
   &__bottom {
     background: $theme-clr;
     display: flex;

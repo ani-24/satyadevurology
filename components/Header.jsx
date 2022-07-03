@@ -92,7 +92,7 @@ const Header = ({ services, specialities }) => {
               <Link href="/facilities">Facilities</Link>
             </li>
             <li className="header__bottom__list__item">
-              <Link href="/">Our Doctors</Link>
+              <Link href="/doctors-list">Our Doctors</Link>
             </li>
             <li className="header__bottom__list__item">
               <Link href="/gallery">Gallery</Link>
@@ -176,8 +176,8 @@ const Header = ({ services, specialities }) => {
         <Link href="/facilities">
           <a onClick={() => setVisibility(false)}>Facilities</a>
         </Link>
-        <Link href="/">
-          <a onClick={() => setVisibility(false)}>Doctor List</a>
+        <Link href="/doctors-list">
+          <a onClick={() => setVisibility(false)}>List of Doctors</a>
         </Link>
         <Link href="/gallery">
           <a onClick={() => setVisibility(false)}>Gallery</a>

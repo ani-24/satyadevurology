@@ -8,6 +8,7 @@ import specialities from "./specialities";
 import blogs from "./blogs";
 import testimonial from "./testimonial";
 import gallery from "./gallery";
+import doctors from "./doctors";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -21,5 +22,6 @@ export default createSchema({
     blogs,
     testimonial,
     gallery,
+    doctors,
   ]),
 });
