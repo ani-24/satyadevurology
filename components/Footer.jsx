@@ -43,25 +43,17 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/contact">
+              <Link href="/contact-us">
                 <a>
                   <i className="fa-solid fa-paperclip"></i> Contact Us
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="/services">
+              <Link href="/#services">
                 <a>
                   {" "}
                   <i className="fa-solid fa-paperclip"></i> Services
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/specialities">
-                <a>
-                  {" "}
-                  <i className="fa-solid fa-paperclip"></i> Specialities
                 </a>
               </Link>
             </li>

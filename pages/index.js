@@ -67,7 +67,7 @@ const Award = () => {
 
 const Services = ({ services }) => {
   return (
-    <section className="section container">
+    <section className="section container" id="services">
       <h1 className="section__title">Services We Offer</h1>
       <div className="gallery">
         {services.map((el, index) => {
