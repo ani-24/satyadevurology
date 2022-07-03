@@ -30,7 +30,7 @@ const Contact = ({ services, specialities }) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setUserData({ name: "", email: "", mobile: "", message: "" });
         },
         (error) => {
           console.log(error.text);
