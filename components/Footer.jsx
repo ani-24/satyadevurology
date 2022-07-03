@@ -71,14 +71,21 @@ const Footer = () => {
           <h2 className="footer__grid__item__title">Get in Touch</h2>
           <ul>
             <li>
-              <i className="fa-solid fa-phone"></i> +91 8235152796, 6207909132
+              <i className="fa-solid fa-phone"></i> +91{" "}
+              <a href="tel:8235152796">8235152796</a>,{" "}
+              <a href="tel:6207909132">6207909132</a>
             </li>
             <li>
               <i className="fa-solid fa-envelope"></i>{" "}
-              drrajeshranjan447@gmail.com
+              <a href="mailto:drrajeshranjan447@gmail.com">
+                drrajeshranjan447@gmail.com
+              </a>
             </li>
             <li>
-              <i className="fa-brands fa-whatsapp"></i> 80502 95197
+              <i className="fa-brands fa-whatsapp"></i>{" "}
+              <a href="https://wa.me/+918050295197?text=I%20came%20to%20know%20about%20this%20Hospital%20through%20your%20website,%20I%20need%20some%20more%20information...">
+                80502 95197
+              </a>
             </li>
           </ul>
         </div>
