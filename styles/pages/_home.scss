@@ -147,11 +147,7 @@
     align-items: center;
     flex-direction: column;
     backface-visibility: hidden;
-    & > * {
-      &:not(:last-child) {
-        margin-bottom: 1em;
-      }
-    }
+
     transition: 500ms ease-in-out;
   }
   .back {
@@ -168,6 +164,7 @@
   }
   &__title {
     font-size: 1.7rem;
+    margin: 1em 0;
   }
   &__img {
     width: 100px;
