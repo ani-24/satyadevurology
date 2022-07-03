@@ -2,6 +2,8 @@ import Header from "../components/Header";
 import { client } from "../lib/client";
 
 const DoctorsList = ({ list, services, specialities }) => {
+  list.sort((a, b) => (a.order > b.order ? 1 : b.order > a.order ? -1 : 0));
+
   return (
     <>
       <Header services={services} specialities={specialities} />
