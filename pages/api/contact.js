@@ -15,7 +15,7 @@ export default (req, res) => {
 
   const data = {
     to: "personalityenglish@gmail.com",
-    from: "aniketkumar2427@gmail.com",
+    from: "rajeshwar9204@gmail.com",
     subject: `You've got a message from ${body.name}. Check it out`,
     text: message,
     html: message.replace(/\r\n/g, "<br />"),
