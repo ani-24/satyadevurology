@@ -5,6 +5,8 @@ import Header from "../components/Header";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import Image from "next/image";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -41,6 +43,24 @@ const EmergencyNum = () => {
           </u>
         </p>
       </div>
+    </div>
+  );
+};
+
+const Award = () => {
+  return (
+    <div className="container">
+      <section className="section box-shadow certification">
+        <Image
+          src="/nabh.webp"
+          alt="Certified by NABH"
+          width={300}
+          height={200}
+        />
+        <h3 className="section__title">
+          Certified by NABH for Patient Safety and Qality of Care
+        </h3>
+      </section>
     </div>
   );
 };
@@ -202,6 +222,7 @@ export default function Home({ services, specialities, blogs, testimonial }) {
       <Header services={services} specialities={specialities} />
       <HeroSection />
       <EmergencyNum />
+      <Award />
       <Services services={services} />
       <Blogs blogs={blogs} />
       <Events />
