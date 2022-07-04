@@ -28,22 +28,22 @@ const Header = ({ services, specialities }) => {
             </div>
           </div>
           <div className="header__top__right">
-            <Link href="#">
+            <Link href="https://www.facebook.com/DrRajeshRanjanUrologistinPatna/">
               <a className="header__top__right__box">
                 <i className="fa-brands fa-facebook"></i>
               </a>
             </Link>
-            <Link href="#">
+            <Link href="https://www.youtube.com/channel/UChjSdAvs6jSKTn9-9JaWjhQ">
               <a className="header__top__right__box">
                 <i className="fa-brands fa-youtube"></i>
               </a>
             </Link>
-            <Link href="#">
+            <Link href="https://twitter.com/RajeshUrologist?s=08">
               <a className="header__top__right__box">
                 <i className="fa-brands fa-twitter"></i>
               </a>
             </Link>
-            <Link href="#">
+            <Link href="https://www.instagram.com/drrajeshurologistpatna/?hl=en">
               <a className="header__top__right__box">
                 <i className="fa-brands fa-instagram"></i>
               </a>
