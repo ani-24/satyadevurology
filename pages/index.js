@@ -54,8 +54,8 @@ const Award = () => {
         <Image
           src="/nabh.webp"
           alt="Certified by NABH"
-          width={300}
-          height={200}
+          width={200}
+          height={400 / 3}
         />
         <h3 className="section__title">
           Certified by NABH for Patient Safety and Qality of Care
