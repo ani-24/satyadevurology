@@ -100,22 +100,36 @@ const Header = ({ services, specialities }) => {
               </div>
             </li>
             <li className="header__bottom__list__item">
-              <a className="header__bottom__list__item__link">Facilities</a>
+              <Link href="/facilities">
+                <a className="header__bottom__list__item__link">Facilities</a>
+              </Link>
             </li>
             <li className="header__bottom__list__item">
-              <a className="header__bottom__list__item__link">Our Doctors</a>
+              <Link href="/doctors-list">
+                <a className="header__bottom__list__item__link">Our Doctors</a>
+              </Link>
             </li>
             <li className="header__bottom__list__item">
-              <a className="header__bottom__list__item__link">Gallery</a>
+              <Link href="/gallery">
+                <a className="header__bottom__list__item__link">Gallery</a>
+              </Link>
             </li>
             <li className="header__bottom__list__item">
-              <a className="header__bottom__list__item__link">Blog</a>
+              <Link href="/blogs">
+                <a className="header__bottom__list__item__link">Blogs</a>
+              </Link>
             </li>
             <li className="header__bottom__list__item">
-              <a className="header__bottom__list__item__link">Press Release</a>
+              <Link href="/press-release">
+                <a className="header__bottom__list__item__link">
+                  Press Release
+                </a>
+              </Link>
             </li>
             <li className="header__bottom__list__item">
-              <a className="header__bottom__list__item__link">Contact us</a>
+              <Link href="/contact-us">
+                <a className="header__bottom__list__item__link">Contact us</a>
+              </Link>
             </li>
           </ul>
           <div className="hamburger" onClick={() => setVisibility(true)}>
@@ -176,7 +190,7 @@ const Header = ({ services, specialities }) => {
         <Link href="/facilities">Facilities</Link>
         <Link href="/doctors-list">Our Doctors</Link>
         <Link href="/gallery">Gallery</Link>
-        <Link href="/blog">Blog</Link>
+        <Link href="/blogs">Blogs</Link>
         <Link href="/press-release">Press Release</Link>
         <Link href="/contact-us">Contact us</Link>
       </div>
