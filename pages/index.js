@@ -22,7 +22,7 @@ const HeroSection = () => {
           <p className="subtitle">
             Kidney, Stone & Advance laparoscopic center
           </p>
-          <Link href="/">
+          <Link href="/contact-us">
             <a className="btn box-shadow">Contact us</a>
           </Link>
         </div>
