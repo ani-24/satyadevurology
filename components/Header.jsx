@@ -11,16 +11,17 @@ const Header = ({ services, specialities }) => {
         <div className="container">
           <div className="header__top__left">
             <div className="header__top__left__box">
-              <i class="fa-solid fa-clock"></i> <span>Open 24 &times; 7</span>
+              <i className="fa-solid fa-clock"></i>{" "}
+              <span>Open 24 &times; 7</span>
             </div>
             <div className="header__top__left__box">
-              <i class="fa-solid fa-envelope"></i>{" "}
+              <i className="fa-solid fa-envelope"></i>{" "}
               <Link href="mailto:drrajeshranjan447@gmail.com">
                 drrajeshranjan447@gmail.com
               </Link>
             </div>
             <div className="header__top__left__box">
-              <i class="fa-solid fa-location-dot"></i>{" "}
+              <i className="fa-solid fa-location-dot"></i>{" "}
               <Link href="https://maps.google.com/maps?ll=25.612901,85.0795&z=15&t=m&hl=en&gl=IN&mapclient=embed&cid=11279533622444542325">
                 Magistrate colony, Patna - 800025
               </Link>
@@ -29,22 +30,22 @@ const Header = ({ services, specialities }) => {
           <div className="header__top__right">
             <Link href="#">
               <a className="header__top__right__box">
-                <i class="fa-brands fa-facebook"></i>
+                <i className="fa-brands fa-facebook"></i>
               </a>
             </Link>
             <Link href="#">
               <a className="header__top__right__box">
-                <i class="fa-brands fa-youtube"></i>
+                <i className="fa-brands fa-youtube"></i>
               </a>
             </Link>
             <Link href="#">
               <a className="header__top__right__box">
-                <i class="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-twitter"></i>
               </a>
             </Link>
             <Link href="#">
               <a className="header__top__right__box">
-                <i class="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-instagram"></i>
               </a>
             </Link>
           </div>
@@ -72,7 +73,7 @@ const Header = ({ services, specialities }) => {
             </li>
             <li className="header__bottom__list__item">
               <div className="header__bottom__list__item__link">
-                Services <i class="fa-solid fa-caret-down"></i>
+                Services <i className="fa-solid fa-caret-down"></i>
                 <ul>
                   {services.map((el) => (
                     <Link href={`/service/${el.slug.current}`} key={el._key}>
@@ -118,7 +119,7 @@ const Header = ({ services, specialities }) => {
             </li>
           </ul>
           <div className="hamburger" onClick={() => setVisibility(true)}>
-            <i class="fa-solid fa-list-ul"></i> <span>Menu</span>
+            <i className="fa-solid fa-list-ul"></i> <span>Menu</span>
           </div>
         </div>
       </div>
