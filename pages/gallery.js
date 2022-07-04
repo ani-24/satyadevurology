@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "../components/Header";
 
 import { client, urlFor } from "../lib/client";
@@ -6,8 +7,8 @@ import { LightBox } from "react-lightbox-pack";
 import "react-lightbox-pack/dist/index.css";
 
 const Gallery = ({ gallery, services, specialities }) => {
-  const [toggle, setToggle] = React.useState(false);
-  const [sIndex, setSIndex] = React.useState(0);
+  const [toggle, setToggle] = useState(false);
+  const [sIndex, setSIndex] = useState(0);
 
   // Handler
   const lightBoxHandler = (state, sIndex) => {
