@@ -142,6 +142,7 @@
   max-width: 400px;
   .card__inner {
     width: 100%;
+    perspective: 1000px;
   }
   .front,
   .back {

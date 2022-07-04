@@ -4,17 +4,15 @@
   left: 1em;
   bottom: 1em;
   opacity: 1;
-  animation: show 2000ms ease-in-out;
+  animation: show 500ms ease-in-out;
   cursor: pointer;
   z-index: 100;
   @keyframes show {
     from {
-      bottom: 80%;
-      opacity: 0;
+      transform: scale(0) rotate(360deg);
     }
     to {
-      bottom: 1em;
-      opacity: 1;
+      transform: scale(1) rotate(0);
     }
   }
 }
