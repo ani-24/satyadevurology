@@ -1,6 +1,5 @@
-import React from "react";
 import Header from "../../components/Header";
-import { client, urlFor } from "../../lib/client";
+import { client } from "../../lib/client";
 
 import PortableText from "@sanity/block-content-to-react";
 

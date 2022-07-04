@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Header from "../components/Header";
 
 import { client } from "../lib/client";
@@ -6,31 +5,23 @@ import { client } from "../lib/client";
 import emailjs from "emailjs-com";
 
 const Contact = ({ services, specialities }) => {
-  const [userData, setUserData] = useState({
-    name: "",
-    email: "",
-    mobile: "",
-    message: "",
-  });
-  let name, value;
-  const postUserData = (event) => {
-    name = event.target.name;
-    value = event.target.value;
-    setUserData({ ...userData, [name]: value });
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     emailjs
       .sendForm(
         "service_y0aaqth",
         "template_xnzsxjn",
-        event.target,
+        e.target,
         "_mwu7W44_eSioJwfN"
       )
       .then(
         (result) => {
-          setUserData({ name: "", email: "", mobile: "", message: "" });
+          setUserData(
+            (e.target.name = ""),
+            (e.target.email = ""),
+            (e.target.mobile = ""),
+            (e.target.message = "")
+          );
         },
         (error) => {
           console.log(error.text);
@@ -54,46 +45,19 @@ const Contact = ({ services, specialities }) => {
           <div className="contact-form">
             <form action="#" onSubmit={handleSubmit}>
               <div className="input-field">
-                <input
-                  type="text"
-                  className="input"
-                  required
-                  value={userData.name}
-                  onChange={postUserData}
-                  name="name"
-                />
+                <input type="text" className="input" required name="name" />
                 <label className="label">Name</label>
               </div>
               <div className="input-field">
-                <input
-                  type="email"
-                  className="input"
-                  required
-                  value={userData.email}
-                  onChange={postUserData}
-                  name="email"
-                />
+                <input type="email" className="input" required name="email" />
                 <label className="label">Email</label>
               </div>
               <div className="input-field">
-                <input
-                  type="mobile"
-                  className="input"
-                  required
-                  value={userData.mobile}
-                  onChange={postUserData}
-                  name="mobile"
-                />
+                <input type="mobile" className="input" required name="mobile" />
                 <label className="label">Mobile</label>
               </div>
               <div className="input-field textarea">
-                <textarea
-                  className="input"
-                  required
-                  onChange={postUserData}
-                  name="message"
-                  value={userData.message}
-                ></textarea>
+                <textarea className="input" required name="message"></textarea>
                 <label className="label">Message</label>
               </div>
               <button type="submit" className="btn-submit box-shadow">

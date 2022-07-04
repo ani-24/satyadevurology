@@ -184,14 +184,3 @@ const Header = ({ services, specialities }) => {
 };
 
 export default Header;
-
-export async function getServerSideProps() {
-  const services = await client.fetch(`*[_type == "services"]`);
-  const specialities = await client.fetch(`*[_type == "specialities"]`);
-  return {
-    props: {
-      blogs,
-      testimonial,
-    },
-  };
-}
