@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
-const Header = () => {
+const Header = ({ services, specialities }) => {
+  const [visibility, setVisibility] = useState(false);
+  const [servicesList, setServicesList] = useState(false);
+  const [specialitiesList, setSpecialitiesList] = useState(false);
   return (
     <>
       <div className="header__top">
@@ -50,41 +53,145 @@ const Header = () => {
       <div className="header__bottom">
         <div className="container">
           <ul className="header__bottom__list">
-            <li>
+            <li className="header__bottom__list__item">
               <Link href="/">
-                <a>Home</a>
+                <a className="header__bottom__list__item__link">Home</a>
               </Link>
             </li>
-            <li>
+            <li className="header__bottom__list__item">
               <Link href="/about-us">
-                <a>About us</a>
+                <a className="header__bottom__list__item__link">About us</a>
               </Link>
             </li>
-            <li>
+            <li className="header__bottom__list__item">
               <Link href="/best-urologist-in-patna">
-                <a>Dr. Rajesh Ranjan</a>
+                <a className="header__bottom__list__item__link">
+                  Dr. Rajesh Ranjan
+                </a>
               </Link>
             </li>
-            <li>
-              <Link href="/services">
-                <div>
-                  Services <i class="fa-solid fa-caret-down"></i>
-                  <ul>
-                    <Link href="/bladder-stone">
-                      <a>Bladder Stone</a>
+            <li className="header__bottom__list__item">
+              <div className="header__bottom__list__item__link">
+                Services <i class="fa-solid fa-caret-down"></i>
+                <ul>
+                  {services.map((el) => (
+                    <Link href={`/service/${el.slug.current}`} key={el._key}>
+                      <li>
+                        <a>{el.title}</a>
+                      </li>
                     </Link>
-                  </ul>
-                </div>
-              </Link>
+                  ))}
+                </ul>
+              </div>
+            </li>
+            <li className="header__bottom__list__item">
+              <div className="header__bottom__list__item__link">
+                Services <i className="fa-solid fa-caret-down"></i>
+                <ul>
+                  {specialities.map((el) => (
+                    <Link href={`/speciality/${el.slug.current}`} key={el._key}>
+                      <li>
+                        <a>{el.name}</a>
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
+              </div>
+            </li>
+            <li className="header__bottom__list__item">
+              <a className="header__bottom__list__item__link">Facilities</a>
+            </li>
+            <li className="header__bottom__list__item">
+              <a className="header__bottom__list__item__link">Our Doctors</a>
+            </li>
+            <li className="header__bottom__list__item">
+              <a className="header__bottom__list__item__link">Gallery</a>
+            </li>
+            <li className="header__bottom__list__item">
+              <a className="header__bottom__list__item__link">Blog</a>
+            </li>
+            <li className="header__bottom__list__item">
+              <a className="header__bottom__list__item__link">Press Release</a>
+            </li>
+            <li className="header__bottom__list__item">
+              <a className="header__bottom__list__item__link">Contact us</a>
             </li>
           </ul>
-          <div className="hamburger">
+          <div className="hamburger" onClick={() => setVisibility(true)}>
             <i class="fa-solid fa-list-ul"></i> <span>Menu</span>
           </div>
         </div>
+      </div>
+      <div
+        className={`overlay ${visibility ? "" : "hide"}`}
+        onClick={() => setVisibility(false)}
+      ></div>
+      <div className={`sidenav ${visibility ? "" : "hide"}`}>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+        <Link href="/about-us">
+          <a>About us</a>
+        </Link>
+        <Link href="/best-urologist-in-patna">
+          <a>Dr. Rajesh Ranjan</a>
+        </Link>
+        <div
+          className="sidenav__item"
+          onClick={() => {
+            setServicesList(!servicesList);
+            !servicesList ? setSpecialitiesList(false) : null;
+          }}
+        >
+          Services <i className="fa-solid fa-caret-down"></i>
+          <ul className={servicesList ? "active" : ""}>
+            {services.map((el, index) => (
+              <Link href={`/service/${el.slug.current}`} key={el._key}>
+                <li>
+                  <a>{el.title}</a>
+                </li>
+              </Link>
+            ))}
+          </ul>
+        </div>
+        <div
+          className="sidenav__item"
+          onClick={() => {
+            setSpecialitiesList(!specialitiesList);
+            !specialitiesList ? setServicesList(false) : null;
+          }}
+        >
+          Specialities <i className="fa-solid fa-caret-down"></i>
+          <ul className={specialitiesList ? "active" : ""}>
+            {specialities.map((el, index) => (
+              <Link href={`/service/${el.slug.current}`} key={el._key}>
+                <li>
+                  <a>{el.name}</a>
+                </li>
+              </Link>
+            ))}
+          </ul>
+        </div>
+        <Link href="/facilities">Facilities</Link>
+        <Link href="/doctors-list">Our Doctors</Link>
+        <Link href="/gallery">Gallery</Link>
+        <Link href="/blog">Blog</Link>
+        <Link href="/press-release">Press Release</Link>
+        <Link href="/contact-us">Contact us</Link>
       </div>
     </>
   );
 };
 
 export default Header;
+
+export async function getServerSideProps() {
+  const services = await client.fetch(`*[_type == "services"]`);
+  const specialities = await client.fetch(`*[_type == "specialities"]`);
+  return {
+    props: {
+      blogs,
+      testimonial,
+    },
+  };
+}

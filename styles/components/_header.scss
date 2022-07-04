@@ -68,19 +68,22 @@
     display: none;
     justify-content: space-around;
     &__item {
-      ul {
-        opacity: 0;
-        display: none;
-        position: absolute;
-        padding: 5px;
-        background: $theme-clr;
-        border-radius: 5px;
-        animation: hide 250ms ease-in-out reverse;
-        li {
-          padding: 1em 0.5em;
-          &:hover {
-            background: white;
-            color: $theme-clr;
+      &__link {
+        cursor: pointer;
+        ul {
+          opacity: 0;
+          display: none;
+          position: absolute;
+          padding: 5px;
+          background: $theme-clr;
+          border-radius: 5px;
+          animation: hide 250ms ease-in-out reverse;
+          li {
+            padding: 1em 0.5em;
+            &:hover {
+              background: white;
+              color: $theme-clr;
+            }
           }
         }
       }
@@ -129,17 +132,19 @@
     left: -100%;
     transition: 1s cubic-bezier(0.8, 0.13, 0.83, 0.67);
   }
-  a {
+  a,
+  .sidenav__item {
     display: block;
     padding: 1em 0.5em;
+    cursor: pointer;
     transition: 250ms ease-out;
+    div {
+      cursor: pointer;
+    }
     ul {
-      height: 0;
-      transform-origin: top;
-      transition: 250ms ease-out;
       overflow: hidden;
       margin-top: 1em;
-      display: block;
+      display: none;
       li {
         border-bottom: 1px solid rgba($color: $theme-clr, $alpha: 0.1);
         &:hover {
@@ -147,13 +152,13 @@
           color: $theme-clr;
         }
       }
+      &.active {
+        display: block;
+        background: white;
+        color: $theme-clr;
+      }
     }
     &:hover {
-      background: white;
-      color: $theme-clr;
-    }
-    ul.active {
-      height: 100%;
       background: white;
       color: $theme-clr;
     }
