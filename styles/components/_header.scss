@@ -32,7 +32,6 @@
     }
   }
   &__right {
-    display: none;
     &__box {
       height: 30px;
       width: 30px;
@@ -45,9 +44,6 @@
       &:hover {
         transform: rotate(360deg);
       }
-    }
-    @include media-queries(lg) {
-      display: flex;
     }
   }
 }
