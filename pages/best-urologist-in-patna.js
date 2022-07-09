@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/Header";
 
@@ -6,6 +7,12 @@ import { client } from "../lib/client";
 const BestUrologistInPatna = ({ services, specialities }) => {
   return (
     <>
+      <Head>
+        <title>
+          Best Urologist in Patna | Urology Hospital in Patna | Top Urology
+          doctor in patna
+        </title>
+      </Head>
       <Header services={services} specialities={specialities} />
       <div className="container">
         <section className="section section--about">

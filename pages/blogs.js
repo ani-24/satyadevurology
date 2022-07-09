@@ -3,11 +3,13 @@ import Header from "../components/Header";
 import { client, urlFor } from "../lib/client";
 
 import Link from "next/link";
+import Head from "next/head";
 
 const Blogs = ({ blogs, services, specialities }) => {
   console.log(blogs[0]);
   return (
     <>
+      <Head>Blogs | Satyadev Super Speciality Hospital</Head>
       <Header services={services} specialities={specialities} />
       <section className="container section" style={{ marginTop: "50px" }}>
         <h1 className="section__title">Our Blog</h1>

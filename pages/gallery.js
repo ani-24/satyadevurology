@@ -5,6 +5,7 @@ import { client, urlFor } from "../lib/client";
 
 import { LightBox } from "react-lightbox-pack";
 import "react-lightbox-pack/dist/index.css";
+import Head from "next/head";
 
 const Gallery = ({ gallery, services, specialities }) => {
   const [toggle, setToggle] = useState(false);
@@ -21,6 +22,12 @@ const Gallery = ({ gallery, services, specialities }) => {
   });
   return (
     <>
+      <Head>
+        <title>
+          Gallery | Dr. Kumar Rajesh Ranjan : Best Urologist in Patna | Top
+          Urology Doctor
+        </title>
+      </Head>
       <Header services={services} specialities={specialities} />
       <div className="container">
         <div className="image-gallery">

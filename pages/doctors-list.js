@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Header from "../components/Header";
 import { client } from "../lib/client";
 
@@ -6,6 +7,9 @@ const DoctorsList = ({ list, services, specialities }) => {
 
   return (
     <>
+      <Head>
+        <title>List of our Doctors : Satyadev Super speciality Hospital</title>
+      </Head>
       <Header services={services} specialities={specialities} />
       <div className="container">
         <section className="section section--about">

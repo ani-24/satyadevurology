@@ -3,10 +3,14 @@ import Header from "./../components/Header";
 import { client } from "../lib/client";
 
 import Link from "next/link";
+import Head from "next/head";
 
 const AboutUs = ({ services, specialities }) => {
   return (
     <>
+      <Head>
+        <title>Dr. Rajesh Kumar Ranjan: Best Urologist in Patna</title>
+      </Head>
       <Header services={services} specialities={specialities} />
       <div className="container">
         <section className="section section--about">

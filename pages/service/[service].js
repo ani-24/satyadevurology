@@ -2,10 +2,14 @@ import Header from "../../components/Header";
 import { client, urlFor } from "../../lib/client";
 
 import PortableText from "@sanity/block-content-to-react";
+import Head from "next/head";
 
 const Service = ({ service, services, specialities }) => {
   return (
     <>
+      <Head>
+        <title>{service.title} | Dr. Kumar Rajesh Ranjan</title>
+      </Head>
       <Header services={services} specialities={specialities} />
       <div className="container service">
         <h1 className="title">{service.title}</h1>

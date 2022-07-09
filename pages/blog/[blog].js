@@ -2,10 +2,16 @@ import Header from "../../components/Header";
 import { client } from "../../lib/client";
 
 import PortableText from "@sanity/block-content-to-react";
+import Head from "next/head";
 
 const Blog = ({ blog, services, specialities }) => {
   return (
     <>
+      <Head>
+        <title>
+          {blog.title} -- {blog.author}
+        </title>
+      </Head>
       <Header services={services} specialities={specialities} />
       <div className="blog conatiner">
         <h1 className="title">{blog.title}</h1>

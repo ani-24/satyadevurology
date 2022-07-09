@@ -5,6 +5,7 @@ import { client, urlFor } from "./../lib/client";
 
 import { LightBox } from "react-lightbox-pack";
 import "react-lightbox-pack/dist/index.css";
+import Head from "next/head";
 
 const PressRelease = ({ pressRelease, services, specialities }) => {
   const [toggle, setToggle] = useState(false);
@@ -21,6 +22,12 @@ const PressRelease = ({ pressRelease, services, specialities }) => {
   });
   return (
     <>
+      <Head>
+        <title>
+          Contact us: Dr. Kumar Rajesh Ranjan : Best Urologist in Patna | Top
+          Urology Doctor
+        </title>
+      </Head>
       <Header services={services} specialities={specialities} />
       <div className="container">
         <div className="image-gallery image-gallery--press-release">

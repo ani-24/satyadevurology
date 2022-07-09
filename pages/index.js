@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Navigation, Pagination } from "swiper";
+import Head from "next/head";
 
 const HeroSection = () => {
   return (
@@ -219,6 +220,9 @@ const Map = () => {
 export default function Home({ services, specialities, blogs, testimonial }) {
   return (
     <>
+      <Head>
+        <title>Satyadev Super Speciality Hospital</title>
+      </Head>
       <Header services={services} specialities={specialities} />
       <HeroSection />
       <EmergencyNum />
