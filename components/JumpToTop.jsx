@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 
 const JumpToTop = () => {
+  const jumpBtn = useRef(null);
+  const addClick = () => {
+    jumpBtn.current.style.transform = "scale(0.8)";
+  };
+  const removeClick = () => {
+    jumpBtn.current.style.transform = "scale(1)";
+  };
+  console.log(jumpBtn);
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
@@ -26,6 +34,10 @@ const JumpToTop = () => {
     <div
       className={`jump-to-top ${visible ? "show" : "hide"}`}
       onClick={scrollTop}
+      ref={jumpBtn}
+      onMouseDown={addClick}
+      onMouseUp={removeClick}
+      onMouseLeave={removeClick}
     >
       <i className="fas fa-caret-up jump-to-top__icon"></i>
     </div>
