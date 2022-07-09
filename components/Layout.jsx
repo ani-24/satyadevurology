@@ -32,6 +32,7 @@ const Layout = ({ children, services }) => {
           name="description"
           content="Best urologist in Patna, Dr. Kumar Rajesh Ranjan is an experienced urology doctor in Patna at Satyadev Super Speciality Hospital who has treated chronic urology and kidney-related diseases."
         />
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       {children}
       <Footer />
